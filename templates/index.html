@@ -1,0 +1,131 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Gustavo, Gustavo Maciel, Gustavo Maciel Nunes,"/>
+    <meta name="description" content="Personal portfolio of Gustavo Maciel Nunes, a 21-year-old Brazilian web developer and software developer." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Maciel</title>
+    <link rel="icon" href="{% static 'img/icon.png' %}" type="image/png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="{% static 'css/Dark-Footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Dark-Footer1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Dark-Footer2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Dark-Footer3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Dark-Footer4.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Dark-Footer5.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Features-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Header-Blue.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <div>
+        <div class="header-blue" style="background-image:url({% static 'img/about-me-bg.jpg' %});background-size:cover;padding:53px;">
+            <nav class="navbar navbar-dark navbar-expand-md fixed-top" id="navbar-topo" style="background-color:rgba(10,0,31,0.61);">
+                <div class="container"><a class="navbar-brand" href="#"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation"><a class="nav-link active scroll-suave" href="#about-me">About Me</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active scroll-suave" href="#work">Work</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active scroll-suave" href="#contact">Contact</a></li>
+                            <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="font-size:14px;">en-us</a>
+                                <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="/pt-br/">pt-br</a>
+                                </div>
+                            </li>
+                        </ul><span class="navbar-text"> </span></div>
+                </div>
+            </nav>
+            <div class="container hero" id="about-me">
+                <div class="row" style="background-color:rgba(0,0,0,0.75);border-radius:15px;">
+                    <div class="col-12 col-lg-6 col-xl-5 offset-xl-1" style="background-color:rgba(29,36,46,0);border-radius:25px;height:739px;">
+                        <h1 style="margin:0px;padding:0px;"><br>Hey there! How are you today? ;d<br><br></h1>
+                        <p class="text-justify"><br>The name's Gustavo Maciel Nunes, and I am a Software/Web Developer currently living in Brazil. You could say that I'm a geek, but the most important thing you should know about me is that I love this world of technology, mostly
+                            when the subjects are Artificial Inteligence, Web Development and Software Engineering.<br><br></p>
+                    </div>
+                    <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+                        <div class="iphone-mockup"><img src="{% static 'img/squared.png' %}" class="device" style="border-radius:55%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features-clean" id="work">
+        <div class="container">
+            <div data-aos="fade" data-aos-duration="700" class="intro">
+                <h2 class="text-center">What can I do?<br></h2>
+                <p class="text-center">Let's keep it simple, shall we?<br></p>
+            </div>
+            <div class="row features, align-center">
+                <div class="col-sm-12 col-lg-5 offset-lg-1 item" data-aos="fade-right" data-aos-duration="700"><i class="fa fa-code icon" style="font-size:50px;"></i>
+                    <h3 class="name">Things I can work with</h3>
+                    <p class="description"><br>I'm a web developer ready to help you achieve your goals. My set of skills include:<br><br></p>
+                    <p class="description"><strong>Front-End:</strong>&nbsp;HTML, CSS, Javascript, Bootstrap, Materialize, JQuery, Angular 2<br></p>
+                    <p class="description"><strong>Back-End:</strong>&nbsp;Java, PHP, Python, Django, RESTful API<br></p>
+                    <p class="description"><strong>Others:</strong>&nbsp;MySQL, PostgreSQL, Scrum Methodology<br></p>
+                </div>
+                <div class="col-sm-12 col-lg-5 float-right item" data-aos="fade-left" data-aos-duration="700"><i class="fa fa-lightbulb-o icon" style="font-size:50px;"></i>
+                    <h3 class="name">Expertise<br></h3>
+                    <p class="description"><br>I have an extense knowledge, as a Fullstack developer I can build you a website, a web system, a mobile app and even give you my opinion about your work, it doesn't hurt to see somebody else's opinion about what you've done! :P<br><br></p>
+                </div>
+                <div class="col-sm-12 col-lg-11 float-right item" data-aos="zoom-in" data-aos-duration="700" style="text-decoration:none;">
+                   <i class="fa fa-list-alt icon" style="font-size:50px;"></i>
+                    <h3 class="text-left name">Work Resumé<br></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><span style="text-decoration:none;"><a target="_blank" href="http://eaglejr.com.br/">Eagle - Digital Solutions</a>&nbsp;- One year experience as a web developer in the Junior Company located in Brazil, affiliated to the&nbsp;<a target="_blank" href="https://ufpb.br/">Federal University of Paraíba</a><br></span></li>
+                        <li
+                            class="list-group-item"><span>Scholarship Holder - 2 Years as a Scholarship Holder as a monitor of programming classes<br></span></li>
+                            <li class="list-group-item"><span>Freelancer at&nbsp;<a target="_blank" href="https://www.workana.com/pt/freelancers?query=Gustavo+Maciel+Nunes">Workana</a><br></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-dark" id="contact">
+        <div style="text-align:center;">
+            <h2 class="divider-style" style="margin-top:0px;"><span style="background-color:rgb(40, 45, 50);"><i class="fa fa-comments" style="color:rgb(255,255,255);"></i>&nbsp;Contact Me</span></h2>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-md-6 item text" style="margin-bottom:0px;">
+                        <h3></h3>
+                        <p>If you got interested, just get in touch with me, I promisse I'll answer as fast as I can! :)<br><br></p>
+                    </div>
+                    <div class="col item social" style="margin-top:15px;"><a href="https://www.facebook.com/gustavo.maciel.7" target="_blank"><i class="fa fa-facebook-square"></i></a><a href="https://api.whatsapp.com/send?phone=5569992794056" target="_blank"><i class="icon ion-social-whatsapp"></i></a>
+                        <a
+                            href="https://github.com/GustavoMaciel" target="_blank"><i class="icon ion-social-github"></i></a><a href="https://www.linkedin.com/in/gustavo-maciel-nunes/?locale=en_US" target="_blank"><i class="icon ion-social-linkedin"></i></a></div>
+                </div>
+                <div style="text-align:center;margin-top:-40px;">
+                    <h2 class="divider-style"></h2>
+                    <div class="copy-footer" style="height:35px;">
+                        <a href="mailto:gustavo.maciel@dce.ufpb.br"><p class="float-right copyright">gustavo.maciel@dce.ufpb.br<br></p></a>
+                        <p class="float-left copyright">© 2018 Handmade by me, compiled by your computer<br></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bs-animation.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+</body>
+
+</html>
