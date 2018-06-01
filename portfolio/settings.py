@@ -16,7 +16,7 @@ SECRET_KEY = '=s%=h7@+kx=o-fcev2xd+n)icw&em7&mb=q@ogd@+i+4^wbrm*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '204.48.27.239']
+ALLOWED_HOSTS = ['localhost', '204.48.27.239', 'gustavo-nunes.tk', 'www.gustavo-nunes.tk']
 
 
 # Application definition
