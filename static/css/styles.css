@@ -5,3 +5,26 @@
 .copy-footer a {
     color: #fff;
 }
+
+.body {
+    background: url("../img/background-contato.png") center center;
+    background-size: cover;
+    margin: 0px;
+    padding: 25px;
+}
+
+form label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form {
+    border-radius: 15px;
+    padding: 10px 25px;
+    margin: 5px 1px;
+    background-color: rgb(211,211,211);
+}
+
+.text-danger {
+    color: red;
+}

@@ -1,0 +1,70 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="icon" href="{% static 'img/icon.png' %}" type="image/png"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<div class="body">
+    <div class="container">
+        <div class="col-md-6 offset-md-3 col-sm-10 offset-s2">
+            <div class="form">
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    <div class="form-group text-center">
+                        <h4>Please fill out this form and I'll reach you out as quickly as possible.</h4>
+                        {% if messages %}
+                            <div class="alert alert-dark alert-dismissible fade show mensagens" role="alert">
+                                <ul style="list-style: none">
+                                    {% for message in messages %}
+                                        <li class="text-{{message.tags}}">{{message}}</li>
+                                    {% endfor %}
+                                </ul>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label class="" for="sub">Subject:</label>
+                        {{ form.subject | add_class:'form-control' | attr:'id:sub' }}
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="from">Your Name:</label>
+                        {{ form.received_from | add_class:'form-control' | attr:'id:from' }}
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="email">Your E-Mail:</label>
+                        {{ form.received_email | add_class:'form-control' | attr:'id:email' }}
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="message">Your Message:</label>
+                        {{ form.message | add_class:'form-control' | attr:'id:message' }}
+                    </div>
+
+                    <button class="btn btn-block btn-primary" type="submit">Send</button>
+                    <h6 style="margin-top: 5px" class="text-muted">Click <a href="/">here</a> to return.</h6>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

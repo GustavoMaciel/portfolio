@@ -19,6 +19,8 @@ from main import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.EnglishHome.as_view()),
-    url(r'^pt-br/$', views.PortugueseHome.as_view())
+    url(r'^$', views.Home.as_view(lang='en-us')),
+    url(r'^pt-br/$', views.Home.as_view(lang='pt-br')),
+    url(r'^contact/$', views.Contact.as_view(lang="en-us"), name='contact'),
+    url(r'^pt-br/contato/$', views.Contact.as_view(lang="pt-br"), name='contato'),
 ]
