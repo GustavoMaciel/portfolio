@@ -8,6 +8,7 @@ class Contact(models.Model):
     received_email = models.EmailField(max_length=254, blank=False, null=True)
     message = models.TextField(blank=False, null=True)
     date = models.DateField(auto_now_add=True)
+    person = models.ForeignKey('Person', related_name='person', null=True, blank=True)
 
     def __str__(self):
         return self.subject
@@ -15,7 +16,6 @@ class Contact(models.Model):
 class Person(models.Model):
     name = models.CharField(max_length=254, blank=False, null=True)
     email = models.EmailField(max_length=254, blank=False, null=True)
-    contact_made = models.ManyToManyField(Contact, related_name='contact')
     date_joined = models.DateField(auto_now_add=True)
 
     def __str__(self):

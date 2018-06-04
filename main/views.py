@@ -30,7 +30,6 @@ class Contact(View):
         form = ContactForm(request.POST)
 
         if(form.is_valid()):
-            contact = form.save()
             email = form.cleaned_data['received_email']
             name = form.cleaned_data['received_from']
 
@@ -40,8 +39,11 @@ class Contact(View):
                 person = Person(name=name, email=email)
                 person.save()
 
-            person.contact_made.add(contact)
-            person.save()
+            contact = form.save()
+            contact.person = person
+            contact.save()
+
+
 
             if(self.lang == 'pt-br'):
                 succes = 'Obrigado por entrar em contato! ;)'
