@@ -54,7 +54,7 @@ class Contact(View):
             return render(request, 'contact.html', context)
 
         else:
-            
+
             if(self.lang == 'pt-br'):
                 error = 'Não foi possível registrar seu contato, por favor mantenha em mente que todos os campos são' \
                         ' obrigatórios.'
