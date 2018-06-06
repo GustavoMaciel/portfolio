@@ -27,7 +27,7 @@ class Home(View):
                                   received_email=contact['received_email'], message=contact['message'], date=contact['date'])
             except Contact.DoesNotExist:
                 if(contact['person'] != None):
-                    person = Person.objects.get(pk=contact['person']['id'])
+                    person = Person.objects.get(name=contact['person']['name'], email=contact['person']['email'])
                 else:
                     person = None
                 current = Contact(subject=contact['subject'], received_from=contact['received_from'],
@@ -45,14 +45,12 @@ class Home(View):
     #             current = Person(name=person.name, email=person.email, date_joined=person.date_joined)
     #             current.save()
 
+
     def get(self, request):
-        self.get_persons()
         self.get_contacts()
-
+        self.get_persons()
         persons = Person.objects.all()
-        contacts = Contact.objects.all()
-
+        contacts = Contact.objects.all().order_by('date')
         context = {'persons': persons,
-                   'contacts': contacts}
-
-        return render(request, 'teste.html', context=context)
+                   'contacts': contacts,}
+        return render(request, 'index.html', context=context)
