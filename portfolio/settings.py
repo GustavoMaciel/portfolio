@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_DIR = os.path.join(BASE_DIR, 'static/portfolio')
+STATIC_DIR = os.path.join(BASE_DIR, 'static/dashboard')
 STATICFILES_DIRS = [STATIC_DIR]
 
 
@@ -19,6 +19,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '204.48.27.239', 'gustavo-nunes.tk', 'www.gustavo-nunes.tk']
 
+REST_FRAMEWORK ={
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
+    ]
+}
 
 # Application definition
 
@@ -30,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
+    'rest_framework',
     'main',
 ]
 
